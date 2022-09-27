@@ -13,7 +13,12 @@ class DetallePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text("articulo.title")),
       body: Container(
-        child: Text(articulo.title),
+        child: Column(
+          children: [
+            Text(articulo.title),
+            Text(articulo.description),
+          ],
+        ),
       ),
     );
   }

@@ -5,14 +5,14 @@ import 'package:http/http.dart' as http;
 import '../models/articulo.model.dart';
 
 class ArticuloProvider {
-  Future<List<ArticuloModel>> obtenerArticulos() async {
+  Future<List<ArticuloModel>> obtenerArticulos(String q) async {
     List<ArticuloModel> articulos = [];
     var client = http.Client();
 
     try {
       Map<String, String> parametros = {
-        'q': 'tesla',
-        'from': '2022-08-17',
+        'q': q,
+        'from': '2022-08-27',
         'sortBy': 'publishedAt',
         'apiKey': 'afcc573d93334799bae4a3222c97f93d',
       };
